@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>NestJS Knowledge sharing tool</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <style>
+    #table {
+      margin: 20px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">NestJS Knowledge sharing tool</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <table id="table" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+          <thead>
+            <tr>
+              <th class="mdl-data-table__cell--non-numeric">From</th>
+              <th class="mdl-data-table__cell--non-numeric">To</th>
+              <th class="mdl-data-table__cell--non-numeric">Last Update</th>
+              <th>Clicks number</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each links}}
+            <tr>
+              <td class="mdl-data-table__cell--non-numeric"><a href={{this.from}}>{{this.from}}</a></td>
+              <td class="mdl-data-table__cell--non-numeric"><a href={{this.to}}>{{this.to}}</a></td>
+              <td class="mdl-data-table__cell--non-numeric">{{this.lastUpdate}}</td>
+              <td>{{this.numClicks}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
