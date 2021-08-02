@@ -1,4 +1,4 @@
-# NestJS Resources Aggregator
+# NestJS golink
 
 ## What
 This is a simple Knowledge sharing tool inspired by the Google go/links. It's a resources aggregator where you can define easy to remember links to resources distributed in different places of your organization. For example, suppose you want your new employee to take a look at the organization code-style guide, you can simply send him/her a 'go.to/code-stye' that will point to the desired resources such as a PDF/Drive Document/Video...
